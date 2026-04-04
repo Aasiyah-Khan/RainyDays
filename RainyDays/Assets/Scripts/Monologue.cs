@@ -12,12 +12,21 @@ public class Monologue : MonoBehaviour
     // and to put the text
     string logs;
 
+    // the array of logs
+    string[] comments;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         // hide the UI
         UI.SetActive(false);
         UIText.SetActive(false);
+        comments = new string[5]; 
+        comments[0] = "I touched the box!";
+        comments[1] = "Box has been touched!";
+        comments [2] = "This box is purple!";
+        comments[3] = "I like boxes!";
+        comments[4] = "Okay ran out of ideas!";
 
     }
 
@@ -43,7 +52,7 @@ public class Monologue : MonoBehaviour
 
 
         // wait 2 secs
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
 
 
 
@@ -83,9 +92,16 @@ public class Monologue : MonoBehaviour
 
     public void Interaction()
     {
-        logs = "This is a test message.";
+        // choose a random number
+        int randoNumbo = UnityEngine.Random.Range(0,5);
+
+        
+
+       logs = comments[randoNumbo];
         Display(logs);
     }
+
+ 
 
 
 
