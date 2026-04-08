@@ -12,6 +12,8 @@ public class Monologue : MonoBehaviour
     // and to put the text
     string logs;
 
+    bool touched;
+
     // the array of logs
     string[] comments;
 
@@ -27,6 +29,8 @@ public class Monologue : MonoBehaviour
         comments [2] = "This box is purple!";
         comments[3] = "I like boxes!";
         comments[4] = "Okay ran out of ideas!";
+        // so you can't keep spamming interactions
+        touched = false;
 
     }
 
@@ -42,24 +46,16 @@ public class Monologue : MonoBehaviour
         UI.SetActive(true);
         UIText.SetActive(true);
 
-
         // use the typing coroutine i made
         yield return StartCoroutine(TypeSentence(message));
 
-
-
-
-
-
-        // wait 2 secs
-        yield return new WaitForSeconds(3f);
-
-
-
+        // wait 3 secs
+        yield return new WaitForSeconds(1.5f);
 
         // hide the UI
         UI.SetActive(false);
         UIText.SetActive(false);
+        touched = false;
     }
 
 
@@ -67,11 +63,10 @@ public class Monologue : MonoBehaviour
 
 
 
-// to type each friend char bh char
+// to type each friend char by char
     IEnumerator TypeSentence(string sentence)
     {
-
-
+        
         logs = "";
         foreach (char letter in sentence.ToCharArray())
         {
@@ -92,13 +87,23 @@ public class Monologue : MonoBehaviour
 
     public void Interaction()
     {
-        // choose a random number
-        int randoNumbo = UnityEngine.Random.Range(0,5);
+        if(touched == false)
+        { 
+            touched = true;
+            // choose a random number
+            int randoNumbo = UnityEngine.Random.Range(0,5);
+            logs = comments[randoNumbo];
+            // run the helper function
+            Display(logs);
+           
+        }
+        else
+        {
+            Debug.Log("Wait please!");
+        }
 
         
-
-       logs = comments[randoNumbo];
-        Display(logs);
+        
     }
 
  
