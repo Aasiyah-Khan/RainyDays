@@ -5,10 +5,12 @@ public class Roll_Window : MonoBehaviour
     public Rigidbody2D rb;
     //public Transform posY;
 
+    /*
     public Transform window;
 
     public GameObject Button_Down;
     public GameObject Button_Up;
+    */
 
     bool isMoving;
 
@@ -34,6 +36,7 @@ public class Roll_Window : MonoBehaviour
             rb.linearVelocityY = 0;
         }
 
+        /*
         if (window.position.y <= -6.5f)
         {
             rb.linearVelocityY = 0;
@@ -45,6 +48,7 @@ public class Roll_Window : MonoBehaviour
             rb.linearVelocityY = 0;
             ButtonDownOn();
         }
+        */
     }
 
     public void Move()
@@ -57,6 +61,7 @@ public class Roll_Window : MonoBehaviour
         isMoving = false;
     }
 
+    /*
     public void ButtonDownOff()
     {
         Button_Down.SetActive(false);
@@ -70,4 +75,5 @@ public class Roll_Window : MonoBehaviour
 
         Button_Up.SetActive(false);
     }
+    */
 }
