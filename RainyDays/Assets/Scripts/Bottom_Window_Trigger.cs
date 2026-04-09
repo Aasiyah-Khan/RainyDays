@@ -32,7 +32,8 @@ public class Bottom_Window_Trigger : MonoBehaviour
         {
             Debug.Log("Bottom Trigger Hit");
 
-            window.linearVelocityY = 0;
+            //window.linearVelocityY = 0;
+            stop = true;
 
             buttonDown.SetActive(false);
             Button_Down.enabled = false;
@@ -40,10 +41,5 @@ public class Bottom_Window_Trigger : MonoBehaviour
             buttonUp.SetActive(true);
             Button_Up.enabled = true;
         }
-    }
-
-    public void WindowStop()
-    {
-
     }
 }
