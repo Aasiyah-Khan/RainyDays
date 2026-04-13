@@ -982,7 +982,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.47798735, g: 0.4674656, b: 0.4674656, a: 1}
+  m_Color: {r: 0.25157225, g: 0.25157225, b: 0.25157225, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1000,7 +1000,7 @@ Transform:
   m_GameObject: {fileID: 765129679}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 14.94, y: -3.8586, z: 4.96}
+  m_LocalPosition: {x: 14.84, y: -3.8586, z: 4.86}
   m_LocalScale: {x: 17.812363, y: 2.2001185, z: 0.99411}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1147,7 +1147,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1129643255}
           m_TargetAssemblyTypeName: Roll_Window, Assembly-CSharp
-          m_MethodName: Move
+          m_MethodName: MoveDown
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1229,11 +1229,35 @@ MonoBehaviour:
   - eventID: 2
     callback:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1129643255}
+          m_TargetAssemblyTypeName: Roll_Window, Assembly-CSharp
+          m_MethodName: MoveUp
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 3
     callback:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1129643255}
+          m_TargetAssemblyTypeName: Roll_Window, Assembly-CSharp
+          m_MethodName: Stop
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &881704278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1241,7 +1265,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 881704275}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -1514,7 +1538,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Roll_Window
   rb: {fileID: 685712162}
-  moveSpeed: -100
+  speedUp: 3
+  speedDown: -3
 --- !u!1 &1146707103
 GameObject:
   m_ObjectHideFlags: 0
@@ -1604,17 +1629,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1146707103}
-  m_LocalRotation: {x: -0, y: -0.38268343, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0, z: -6.5112057}
-  m_LocalScale: {x: 0.0017486704, y: 0.0019983677, z: 0.0017486706}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 10.93}
+  m_LocalScale: {x: 0.016443163, y: 0.016443163, z: 0.016443163}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 486164926}
-  m_Father: {fileID: 1778773211}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.8300754, y: -1.1366872}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1078, y: 606}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1153302107
@@ -2270,12 +2295,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79af6df85f6efed40ba177e7e8c64925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bottom_Window_Trigger
-  window: {fileID: 685712162}
+  windowController: {fileID: 1129643255}
   buttonDown: {fileID: 781349905}
   buttonUp: {fileID: 881704275}
   Button_Down: {fileID: 881704278}
   Button_Up: {fileID: 881704278}
-  stop: 0
 --- !u!61 &1733672865
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2511,6 +2535,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1778773211}
   - component: {fileID: 1778773210}
+  - component: {fileID: 1778773212}
   m_Layer: 0
   m_Name: Top Window Trigger
   m_TagString: Untagged
@@ -2576,10 +2601,26 @@ Transform:
   m_LocalPosition: {x: 15.032, y: 9.353, z: 5.052}
   m_LocalScale: {x: 17.812363, y: 8.228297, z: 0.99411}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1146707107}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+--- !u!114 &1778773212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778773209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caaf4fee98a1cc340be7c3f8e7b05306, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Top_Window_Trigger
+  windowController: {fileID: 1129643255}
+  buttonDown: {fileID: 781349905}
+  buttonUp: {fileID: 881704275}
+  Button_Down: {fileID: 781349907}
+  Button_Up: {fileID: 881704278}
 --- !u!1 &1834653706
 GameObject:
   m_ObjectHideFlags: 0
@@ -2665,13 +2706,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1834653706}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1882900729
 GameObject:
   m_ObjectHideFlags: 0
@@ -2980,6 +3021,7 @@ SceneRoots:
   - {fileID: 1733672866}
   - {fileID: 1778773211}
   - {fileID: 1882900733}
+  - {fileID: 1146707107}
   - {fileID: 1480358957}
   - {fileID: 151697721}
   - {fileID: 1642359027}

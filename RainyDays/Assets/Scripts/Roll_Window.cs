@@ -12,20 +12,25 @@ public class Roll_Window : MonoBehaviour
     public GameObject Button_Up;
     */
 
-    bool isMoving;
+    //bool isMoving;
 
-    public float moveSpeed = -5f;
-    //public float maxPos = -6.5f;
+    public float speedUp = 5f;
+    public float speedDown = -5f;
+
+    float currentSpeed = 0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        isMoving = false;
+        //isMoving = false;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        rb.linearVelocity = new Vector2(0, currentSpeed); 
+        
+        /*
         if (isMoving == true)
         {
             rb.linearVelocityY = moveSpeed * Time.deltaTime;
@@ -51,14 +56,23 @@ public class Roll_Window : MonoBehaviour
         */
     }
 
-    public void Move()
+    public void MoveDown()
     {
-        isMoving = true;
+        //isMoving = true;
+
+        currentSpeed = speedDown;
+    }
+
+    public void MoveUp()
+    {
+        currentSpeed = speedUp;
     }
 
     public void Stop()
     {
-        isMoving = false;
+        //isMoving = false;
+
+        currentSpeed = 0f;
     }
 
     /*
