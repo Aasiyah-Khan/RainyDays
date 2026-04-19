@@ -6,6 +6,9 @@ TagManager:
   tags:
   - dog
   - guitar
+  - windshield
+  - headphones
+  - monster
   layers:
   - Default
   - TransparentFX
