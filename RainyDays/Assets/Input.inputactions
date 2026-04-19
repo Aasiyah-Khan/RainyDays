@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "Input",
+    "maps": [
+        {
+            "name": "window",
+            "id": "95fa091f-dbf0-40b4-89ff-05f6968908a4",
+            "actions": [
+                {
+                    "name": "mouseDown",
+                    "type": "Button",
+                    "id": "f14d1d39-0c1e-465f-9b1f-8001524f17a8",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0209d235-ff2d-4765-9a62-2b2d8cf0354a",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "mouseDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
