@@ -52,6 +52,17 @@ public class Drawing : MonoBehaviour
         if (callbackContext.performed)
         {
             mouseDown = true;
+             // Reset the line
+            line.positionCount = 0;
+
+            // reSet starting point
+            Vector3 startPos = GetWorldPositionFromMouse();
+            startPos.z = 0f;
+
+            line.positionCount = 1;
+            line.SetPosition(0, startPos);
+
+        prevPos = startPos;
            
             
         }
