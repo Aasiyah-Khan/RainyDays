@@ -736,7 +736,7 @@ GameObject:
   - component: {fileID: 428375607}
   - component: {fileID: 428375610}
   m_Layer: 5
-  m_Name: Getar
+  m_Name: getar
   m_TagString: guitar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
