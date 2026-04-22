@@ -23,7 +23,8 @@ public class Drawing : MonoBehaviour
     }
     void Update()
     {
-          //Vector3 currentPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        
+  //Vector3 currentPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 currentPos = GetWorldPositionFromMouse();
             currentPos.z = 0f;
             
