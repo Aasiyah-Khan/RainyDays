@@ -7,6 +7,7 @@ public class Top_Window_Trigger : MonoBehaviour
 
     public GameObject buttonDown;
     public GameObject buttonUp;
+    public GameObject drawButton;
 
     public Button Button_Down;
     public Button Button_Up;
@@ -42,6 +43,8 @@ public class Top_Window_Trigger : MonoBehaviour
 
             buttonUp.SetActive(false);
             //Button_Up.enabled = false;
+
+            drawButton.SetActive(true);
         }
     }
 }

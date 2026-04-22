@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Roll_Window : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class Roll_Window : MonoBehaviour
     */
 
     //bool isMoving;
+
+    public GameObject drawButton;
 
     public float speedUp = 5f;
     public float speedDown = -5f;
@@ -61,6 +64,8 @@ public class Roll_Window : MonoBehaviour
         //isMoving = true;
 
         currentSpeed = speedDown;
+
+        drawButton.SetActive(false);
     }
 
     public void MoveUp()

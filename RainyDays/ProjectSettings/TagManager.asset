@@ -9,6 +9,7 @@ TagManager:
   - windshield
   - headphones
   - monster
+  - kick
   layers:
   - Default
   - TransparentFX
