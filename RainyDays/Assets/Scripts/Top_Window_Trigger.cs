@@ -38,10 +38,10 @@ public class Top_Window_Trigger : MonoBehaviour
 
             windowController.Stop();
 
-            buttonDown.SetActive(true);
+            //buttonDown.SetActive(true);
             //Button_Down.enabled = true;
 
-            buttonUp.SetActive(false);
+            //buttonUp.SetActive(false);
             //Button_Up.enabled = false;
 
             drawButton.SetActive(true);

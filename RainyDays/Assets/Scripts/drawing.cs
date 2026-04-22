@@ -23,13 +23,7 @@ public class Drawing : MonoBehaviour
     }
     void Update()
     {
-        
-
-        //Mouse.current.position.ReadValue()
-        //if (Input.GetMouseButton(0))
-        //if(Mouse.current.position.ReadValue() )
-        //{
-            //Vector3 currentPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+          //Vector3 currentPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 currentPos = GetWorldPositionFromMouse();
             currentPos.z = 0f;
             
@@ -38,7 +32,6 @@ public class Drawing : MonoBehaviour
                 line.positionCount++;
                 line.SetPosition(line.positionCount - 1, currentPos);
             }
-       // }
     }
 
     private Vector2 GetWorldPositionFromMouse()
@@ -62,9 +55,8 @@ public class Drawing : MonoBehaviour
             line.positionCount = 1;
             line.SetPosition(0, startPos);
 
-        prevPos = startPos;
-           
-            
+            prevPos = startPos;
+                 
         }
         else
         {

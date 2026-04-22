@@ -39,10 +39,10 @@ public class Bottom_Window_Trigger : MonoBehaviour
             //collision.GetComponent<Roll_Window>().Stop();
             windowController.Stop();
 
-            buttonDown.SetActive(false);
+            //buttonDown.SetActive(false);
             //Button_Down.enabled = false;
 
-            buttonUp.SetActive(true);
+            //buttonUp.SetActive(true);
             //Button_Up.enabled = true;
         }
     }
