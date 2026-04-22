@@ -19,6 +19,7 @@ public class Monologue : MonoBehaviour
     string[] dogComments;
     string[] monsterComments;
     string[] guitarComments;
+    string[] bagComments;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -53,6 +54,10 @@ public class Monologue : MonoBehaviour
         guitarComments [2] = "Maybe I'll make a friend who also plays.";
         guitarComments [3] = "I wonder if the band will ever play together again...";
       
+        bagComments = new string[3];
+        bagComments[0] = "I’ve had this bag since freshman year of high school.";
+        bagComments[1] = "Did I forget anything?";
+        bagComments[2] = "I should’ve packed snacks.";
 
 
 
@@ -153,9 +158,15 @@ public class Monologue : MonoBehaviour
                  
                 Touched(guitarComments, guitarComments.Length);
             }
+            else if(this.gameObject.name == "Bag")
+            {
+                Debug.Log("Bag clicked");
+
+                Touched(bagComments, bagComments.Length);
+            }
             else
             {
-               
+
                 Touched(comments, comments.Length);
             }
             

@@ -10,6 +10,7 @@ TagManager:
   - headphones
   - monster
   - kick
+  - bag
   layers:
   - Default
   - TransparentFX
