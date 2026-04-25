@@ -20,6 +20,8 @@ public class Monologue : MonoBehaviour
     string[] monsterComments;
     string[] guitarComments;
     string[] bagComments;
+    string[] batmanComments;
+    string[] targetComments;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -58,6 +60,12 @@ public class Monologue : MonoBehaviour
         bagComments[0] = "I’ve had this bag since freshman year of high school.";
         bagComments[1] = "Did I forget anything?";
         bagComments[2] = "I should’ve packed snacks.";
+
+        batmanComments = new string[1];
+        batmanComments[0] = "I remember getting that sticker from Comic-Con.";
+
+        targetComments = new string[1];
+        targetComments[0] = "That sticker looks like the target logo.";
 
 
 
@@ -163,6 +171,18 @@ public class Monologue : MonoBehaviour
                 Debug.Log("Bag clicked");
 
                 Touched(bagComments, bagComments.Length);
+            }
+            else if (this.gameObject.name == "batman")
+            {
+                Debug.Log("batman clicked");
+
+                Touched(batmanComments, batmanComments.Length);
+            }
+            else if (this.gameObject.name == "target")
+            {
+                Debug.Log("target clicked");
+
+                Touched(targetComments, targetComments.Length);
             }
             else
             {

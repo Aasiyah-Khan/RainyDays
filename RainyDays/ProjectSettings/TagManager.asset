@@ -11,6 +11,8 @@ TagManager:
   - monster
   - kick
   - bag
+  - batman
+  - target
   layers:
   - Default
   - TransparentFX
