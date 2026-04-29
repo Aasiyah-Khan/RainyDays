@@ -22,6 +22,9 @@ public class Monologue : MonoBehaviour
     string[] bagComments;
     string[] batmanComments;
     string[] targetComments;
+    string[] skateboardComments;
+    string[] suitcaseComments;
+    string[] windshieldComments;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -67,11 +70,20 @@ public class Monologue : MonoBehaviour
         targetComments = new string[1];
         targetComments[0] = "That sticker looks like the target logo.";
 
+        skateboardComments = new string[2];
+        skateboardComments[0] = "I wish I could land a kickflip.";
+        skateboardComments[1] = "I've scraped my knee so many times.";
 
 
-        
+        suitcaseComments = new string[2];
+        suitcaseComments[0] = "I love my R2-D2 suitcase!";
+        suitcaseComments[1] = "Beep Boop Beep.";
 
-        
+        windshieldComments = new string[1];
+        windshieldComments[0] = "It's really pouring out there.";
+
+
+
 
 
 
@@ -183,6 +195,24 @@ public class Monologue : MonoBehaviour
                 Debug.Log("target clicked");
 
                 Touched(targetComments, targetComments.Length);
+            }
+            else if (this.gameObject.name == "skateboard")
+            {
+                Debug.Log("skateboard clicked");
+
+                Touched(skateboardComments, skateboardComments.Length);
+            }
+            else if (this.gameObject.name == "suitcase")
+            {
+                Debug.Log("suitcase clicked");
+
+                Touched(suitcaseComments, suitcaseComments.Length);
+            }
+            else if (this.gameObject.name == "windshield")
+            {
+                Debug.Log("suitcase clicked");
+
+                Touched(windshieldComments, windshieldComments.Length);
             }
             else
             {

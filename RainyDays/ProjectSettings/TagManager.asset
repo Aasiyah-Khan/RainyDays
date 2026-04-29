@@ -13,6 +13,8 @@ TagManager:
   - bag
   - batman
   - target
+  - skateboard
+  - suitcase
   layers:
   - Default
   - TransparentFX
