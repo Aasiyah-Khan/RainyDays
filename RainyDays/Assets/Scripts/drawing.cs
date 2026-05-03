@@ -19,11 +19,20 @@ public class Drawing : MonoBehaviour
 
     void Start()
     {
-        playerLine = false;
+        //playerLine = false;
         line = GetComponent<LineRenderer>();
+        
         prevPos = transform.position;
+         mainCamera = Camera.main;
 
-        mainCamera = Camera.main;
+          Vector3 startPos = GetWorldPositionFromMouse();
+           startPos.z = 0f;
+
+        line.positionCount = 1;
+        line.SetPosition(0, startPos);
+
+
+    prevPos = startPos;
        
 
     }
@@ -38,6 +47,7 @@ public class Drawing : MonoBehaviour
             {
                 line.positionCount++;
                 line.SetPosition(line.positionCount - 1, currentPos);
+                 prevPos = currentPos; 
             }
         }
   //Vector3 currentPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

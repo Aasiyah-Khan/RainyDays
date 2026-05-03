@@ -49,6 +49,8 @@ public class artController : MonoBehaviour
         if (callbackContext.performed)
         {
             mouseDown = true;
+            
+           
              // Reset the line
             //line.positionCount = 0;
 
@@ -65,13 +67,7 @@ public class artController : MonoBehaviour
         else
         {
             mouseDown = false;
-
-            // // make a new line
-            // Instantiate(line);
-            // line.GetComponent<Drawing>().playerLine = true;
-            // lines.Add(line);
-
-            GameObject newLine = Instantiate(line); // store my new line
+             GameObject newLine = Instantiate(line); // store my new line
 
             // the line the player is drawing with is the new one
 
@@ -79,6 +75,12 @@ public class artController : MonoBehaviour
 
             // add my new line
             lines.Add(newLine); 
+
+            // // make a new line
+            // Instantiate(line);
+            // line.GetComponent<Drawing>().playerLine = true;
+            // lines.Add(line);
+
             
             StartCoroutine(Timer());
             
