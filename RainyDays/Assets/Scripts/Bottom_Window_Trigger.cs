@@ -12,6 +12,9 @@ public class Bottom_Window_Trigger : MonoBehaviour
     public Button Button_Down;
     public Button Button_Up;
 
+    public AudioSource Window_Roll;
+    public AudioSource Window_Stop;
+
     bool hasStopped = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -37,13 +40,16 @@ public class Bottom_Window_Trigger : MonoBehaviour
             //hasStopped = true;
 
             //collision.GetComponent<Roll_Window>().Stop();
-            windowController.Stop();
+            //windowController.Stop();
 
             //buttonDown.SetActive(false);
             //Button_Down.enabled = false;
 
             //buttonUp.SetActive(true);
             //Button_Up.enabled = true;
-        }
+
+            Window_Roll.Stop();
+            Window_Stop.Play();
+}
     }
 }

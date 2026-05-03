@@ -17,6 +17,8 @@ public class Roll_Window : MonoBehaviour
 
     public GameObject drawButton;
 
+    public AudioSource Window_Roll;
+
     public float speedUp = 5f;
     public float speedDown = -5f;
 
@@ -66,11 +68,15 @@ public class Roll_Window : MonoBehaviour
         currentSpeed = speedDown;
 
         drawButton.SetActive(false);
+
+        Window_Roll.Play();
     }
 
     public void MoveUp()
     {
         currentSpeed = speedUp;
+
+        Window_Roll.Play();
     }
 
     public void Stop()
@@ -78,6 +84,8 @@ public class Roll_Window : MonoBehaviour
         //isMoving = false;
 
         currentSpeed = 0f;
+
+        Window_Roll.Stop();
     }
 
     /*

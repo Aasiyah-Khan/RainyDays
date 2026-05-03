@@ -12,6 +12,8 @@ public class Top_Window_Trigger : MonoBehaviour
     public Button Button_Down;
     public Button Button_Up;
 
+    public AudioSource Window_Stop;
+
     bool hasStopped = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -45,6 +47,8 @@ public class Top_Window_Trigger : MonoBehaviour
             //Button_Up.enabled = false;
 
             drawButton.SetActive(true);
+
+            Window_Stop.Play();
         }
     }
 }
