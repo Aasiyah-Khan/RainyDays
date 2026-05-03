@@ -65,10 +65,20 @@ public class artController : MonoBehaviour
         else
         {
             mouseDown = false;
-            // make a new line
-            Instantiate(line);
-            line.GetComponent<Drawing>().playerLine = true;
-            lines.Add(line);
+
+            // // make a new line
+            // Instantiate(line);
+            // line.GetComponent<Drawing>().playerLine = true;
+            // lines.Add(line);
+
+            GameObject newLine = Instantiate(line); // store my new line
+
+            // the line the player is drawing with is the new one
+
+            newLine.GetComponent<Drawing>().playerLine = true; 
+
+            // add my new line
+            lines.Add(newLine); 
             
             StartCoroutine(Timer());
             
@@ -79,8 +89,12 @@ public class artController : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         // if i cause an error...
-       // if(lines.GetRange() == )
-       Destroy(lines[0]);
+        if(lines.Count >= 1)
+        {
+              Destroy(lines[0]);
+            lines.RemoveAt(0);
+        }
+     
          
     }
 
