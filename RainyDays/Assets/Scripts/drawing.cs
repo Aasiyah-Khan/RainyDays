@@ -26,7 +26,7 @@ public class Drawing : MonoBehaviour
          mainCamera = Camera.main;
 
           Vector3 startPos = GetWorldPositionFromMouse();
-           startPos.z = 0f;
+           startPos.z = -3f;
 
         line.positionCount = 1;
         line.SetPosition(0, startPos);
@@ -41,7 +41,7 @@ public class Drawing : MonoBehaviour
         if(playerLine == true)
         {
             Vector3 currentPos = GetWorldPositionFromMouse();
-            currentPos.z = 0f;
+            currentPos.z = -3f;
             
             if(Vector3.Distance(currentPos, prevPos) > minDis && artController.instance.mouseDown == true) // losing it rn
             {

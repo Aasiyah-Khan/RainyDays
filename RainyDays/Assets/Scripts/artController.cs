@@ -89,7 +89,7 @@ public class artController : MonoBehaviour
 
       IEnumerator Timer()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(4f);
         // if i cause an error...
         if(lines.Count >= 1)
         {
