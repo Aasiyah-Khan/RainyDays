@@ -4278,6 +4278,7 @@ GameObject:
   - component: {fileID: 1318536771}
   - component: {fileID: 1318536770}
   - component: {fileID: 1318536769}
+  - component: {fileID: 1318536772}
   m_Layer: 0
   m_Name: Right Video
   m_TagString: Untagged
@@ -4303,7 +4304,7 @@ VideoPlayer:
   m_TargetMaterialProperty: <noninit>
   m_RenderMode: 3
   m_AspectRatio: 2
-  m_DataSource: 0
+  m_DataSource: 1
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 0
@@ -4393,6 +4394,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+--- !u!114 &1318536772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318536768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d4bb25df417d474393ba5f2b837c4d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Video_Caller
 --- !u!1 &1429475966
 GameObject:
   m_ObjectHideFlags: 0
@@ -5685,6 +5698,7 @@ GameObject:
   - component: {fileID: 1735186904}
   - component: {fileID: 1735186903}
   - component: {fileID: 1735186902}
+  - component: {fileID: 1735186905}
   m_Layer: 0
   m_Name: Left Video
   m_TagString: Untagged
@@ -5710,7 +5724,7 @@ VideoPlayer:
   m_TargetMaterialProperty: <noninit>
   m_RenderMode: 3
   m_AspectRatio: 2
-  m_DataSource: 0
+  m_DataSource: 1
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 0
@@ -5800,6 +5814,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
+--- !u!114 &1735186905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735186901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d4bb25df417d474393ba5f2b837c4d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Video_Caller
 --- !u!1 &1778773209
 GameObject:
   m_ObjectHideFlags: 0
